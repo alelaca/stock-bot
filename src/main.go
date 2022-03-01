@@ -18,7 +18,7 @@ func main() {
 		StockClient: stooq,
 	}
 
-	connection, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
+	connection, err := amqp.Dial("amqp://guest:guest@rabbitmq:5672/")
 	if err != nil {
 		panic(fmt.Sprintf("error initializing rabbitmq connection, log: %s", err.Error()))
 	}
